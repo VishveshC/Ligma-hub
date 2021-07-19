@@ -2,7 +2,48 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
-/* Global */
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#websiteOverlay {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  -webkit-animation: fadeOut 2s;
+  animation: fadeOut 2s;
+}
+
+/* Global  default color=rgb(25,25,25)*/
 html{
   min-height: 100%;
   overflow: hidden;
@@ -12,10 +53,11 @@ body{
   padding: 4em;
   color: yellowgreen;
   font-family: 'Anonymous Pro', monospace;  
-  background-color: rgb(25,25,25);  
+  background-color: rgba(0,32,63,255)
+;  
 }
 .line-1{
-    color: white;
+    color: rgba(172,239,209,255);
     position: relative;
     top: 8%;  
     width: 24em;
@@ -49,6 +91,6 @@ body{
   font-family: 'Ubuntu Mono', monospace;
   font-size: 40px;
   text-align: center;
-  color: ;
+  color: rgba(46,168,217,255);
 
 }
