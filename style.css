@@ -29,8 +29,9 @@
 
 #websiteOverlay {
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 150%;
+  font-size: 250%;
   text-align: center;
+  padding: 250px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -93,4 +94,7 @@ body{
   text-align: center;
   color: rgba(46,168,217,255);
 
+}
+.invisible {
+  display: none;
 }
