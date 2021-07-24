@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-
+/* Loading Screen */
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -44,7 +45,7 @@
   animation: fadeOut 2s;
 }
 
-/* Global  default color=rgb(25,25,25)*/
+/* General */
 html{
   min-height: 100%;
   overflow: hidden;
@@ -54,11 +55,12 @@ body{
   padding: 4em;
   color: yellowgreen;
   font-family: 'Anonymous Pro', monospace;  
-  background-color: rgba(0,32,63,255)
+  background-color: rgb(44, 6, 31);
 ;  
 }
+/* Typing effect */
 .line-1{
-    color: rgba(172,239,209,255);
+    color: rgb(216, 146, 22);
     position: relative;
     top: 8%;  
     width: 24em;
@@ -84,6 +86,82 @@ body{
   from{border-right-color: white;}
   to{border-right-color: transparent;}
 }
+
+/* Buttons */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background-color: rgb(44, 6, 31);
+  overflow: hidden;
+}
+button{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+button:first-child:hover{
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+}
+button:last-child:hover{
+  background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+  background-size: 400%;
+}
+button:first-child:before,
+button:last-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+button:first-child:hover:before,
+button:last-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+button:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+
+
+
+/* Fonts by me */
 .newfont {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;  
@@ -92,7 +170,7 @@ body{
   font-family: 'Ubuntu Mono', monospace;
   font-size: 40px;
   text-align: center;
-  color: rgba(46,168,217,255);
+  color: rgb(225, 216, 159);
 
 }
 .invisible {
