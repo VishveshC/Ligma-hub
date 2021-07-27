@@ -2,6 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
+
+/* navbar */
+
 
 /* Loading Screen */
 @-webkit-keyframes fadeOut {
@@ -55,7 +59,6 @@ body{
   padding: 4em;
   color: yellowgreen;
   font-family: 'Anonymous Pro', monospace;  
-  background-color: rgb(44, 6, 31);
 ;  
 }
 /* Typing effect */
@@ -99,7 +102,10 @@ html,body{
   display: grid;
   height: 100%;
   place-items: center;
-  background-color: rgb(44, 6, 31);
+  background: url("images/gradientbg1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
 }
 button{
@@ -170,9 +176,15 @@ button:hover{
   font-family: 'Ubuntu Mono', monospace;
   font-size: 40px;
   text-align: center;
-  color: rgb(225, 216, 159);
+  color: #0ebeff;
 
 }
 .invisible {
   display: none;
+}
+
+.link {
+  text-decoration: none;
+  text-decoration-color: none;
+  text-decoration-style: none;
 }
